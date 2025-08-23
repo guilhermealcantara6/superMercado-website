@@ -1,30 +1,16 @@
-# Supermarket website
+# 🛒 Supermarket Website
 
-*Automatically synced with your [v0.app](https://v0.app) deployments*
+Site de supermercado desenvolvido com **v0** e implantado automaticamente na **Vercel**.
+O objetivo é oferecer uma interface simples e moderna para simulação de um e-commerce de supermercado.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/guilherme201811-6756s-projects/v0-supermarket-website)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/projects/ANpTzejrEyE)
+## ✨ Funcionalidades
 
-## Overview
+* Interface limpa e responsiva
+* Produtos organizados em categorias
+* Layout adaptado para desktop e mobile
+* Implantação automática via Vercel
 
-This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
+## 🚀 Deploy
 
-## Deployment
-
-Your project is live at:
-
-**[https://vercel.com/guilherme201811-6756s-projects/v0-supermarket-website](https://vercel.com/guilherme201811-6756s-projects/v0-supermarket-website)**
-
-## Build your app
-
-Continue building your app on:
-
-**[https://v0.app/chat/projects/ANpTzejrEyE](https://v0.app/chat/projects/ANpTzejrEyE)**
-
-## How It Works
-
-1. Create and modify your project using [v0.app](https://v0.app)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+O projeto está disponível em:
+👉 [Supermarket Website](https://vercel.com/guilherme201811-6756s-projects/v0-supermarket-website)
