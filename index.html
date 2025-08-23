@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuperMercado Online</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">
+                    <i class="fas fa-shopping-basket"></i>
+                    SuperMercado Online
+                </h1>
+                <button class="cart-btn" onclick="toggleCart()">
+                    <i class="fas fa-shopping-cart"></i>
+                    Carrinho (<span id="cart-count">0</span>)
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <section class="hero">
+                <h2>Produtos Frescos e de Qualidade</h2>
+                <p>Encontre tudo que você precisa para sua casa</p>
+            </section>
+
+            <!-- Products Grid -->
+            <section class="products">
+                <h3>Nossos Produtos</h3>
+                <div class="products-grid" id="products-grid">
+                    <!-- Products will be loaded here by JavaScript -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cart-overlay" onclick="closeCart()"></div>
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Seu Carrinho</h3>
+            <button class="close-btn" onclick="closeCart()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items will be loaded here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <strong>Total: R$ <span id="cart-total">0,00</span></strong>
+            </div>
+            <button class="checkout-btn" onclick="openCheckout()" id="checkout-btn" disabled>
+                Finalizar Compra
+            </button>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="modal-overlay" id="checkout-overlay">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Finalizar Compra</h3>
+                <button class="close-btn" onclick="closeCheckout()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="checkout-form">
+                    <div class="form-group">
+                        <label for="customer-name">Nome Completo:</label>
+                        <input type="text" id="customer-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="customer-email">Email:</label>
+                        <input type="email" id="customer-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="customer-phone">Telefone:</label>
+                        <input type="tel" id="customer-phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="payment-method">Forma de Pagamento:</label>
+                        <select id="payment-method" required>
+                            <option value="">Selecione...</option>
+                            <option value="credit">Cartão de Crédito</option>
+                            <option value="debit">Cartão de Débito</option>
+                            <option value="pix">PIX</option>
+                            <option value="cash">Dinheiro</option>
+                        </select>
+                    </div>
+                    <div class="order-summary">
+                        <h4>Resumo do Pedido:</h4>
+                        <div id="checkout-items"></div>
+                        <div class="total">
+                            <strong>Total: R$ <span id="checkout-total">0,00</span></strong>
+                        </div>
+                    </div>
+                    <button type="submit" class="confirm-btn">Confirmar Pedido</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Invoice Modal -->
+    <div class="modal-overlay" id="invoice-overlay">
+        <div class="modal invoice-modal">
+            <div class="modal-header">
+                <h3>Nota Fiscal</h3>
+                <button class="close-btn" onclick="closeInvoice()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="invoice-content">
+                <!-- Invoice content will be generated here -->
+            </div>
+            <div class="modal-footer">
+                <button class="print-btn" onclick="printInvoice()">
+                    <i class="fas fa-print"></i>
+                    Imprimir Nota Fiscal
+                </button>
+                <button class="new-order-btn" onclick="startNewOrder()">
+                    Nova Compra
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
